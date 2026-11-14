@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elena &amp; Marco — Wedding Invitation</title>
+
+  <!-- Link Preview Tags for Messenger / Viber / WhatsApp -->
+  <meta property="og:title" content="Elena &amp; Marco — Wedding Invitation" />
+  <meta property="og:description" content="You are invited to celebrate our wedding on June 19, 2027. Tap to open your invitation and RSVP." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ===========================
+       ENVELOPE INTRO OVERLAY
+       =========================== -->
+  <div id="envelope-overlay">
+    <div class="envelope-wrapper" id="envelope" role="button" tabindex="0" aria-label="Open wedding invitation">
+      <div class="envelope-back"></div>
+      <div class="envelope-card">
+        <span class="hero-eyebrow" style="margin-bottom: 4px;">You Are Invited</span>
+        <!-- CUSTOMIZE: Couple Names -->
+        <p class="script envelope-names">Elena &amp; Marco</p>
+        <p class="envelope-date">June 19, 2027</p>
+      </div>
+      <div class="envelope-front"></div>
+      <div class="envelope-flap"></div>
+      <!-- CUSTOMIZE: Monogram Initials -->
+      <div class="wax-seal">E&amp;M</div>
+    </div>
+    <p class="tap-hint">Tap the seal to open</p>
+  </div>
+
+  <!-- ===========================
+       MAIN INVITATION CONTENT
+       =========================== -->
+  <main id="main-content">
+
+    <!-- HERO CARD -->
+    <section class="card">
+      <p class="hero-eyebrow">Together With Their Families</p>
+
+      <!-- CUSTOMIZE: Couple Names & Date -->
+      <h1 class="couple-names script">
+        Elena <span>&amp;</span> Marco
+      </h1>
+      <p class="wedding-date-hero">Saturday, June 19, 2027 &bull; Tagaytay, Philippines</p>
+
+      <!-- Minimal Botanical SVG Divider -->
+      <svg class="floral-divider" viewBox="0 0 180 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 14H75M105 14H170" stroke="currentColor" stroke-width="0.9" stroke-opacity="0.5"/>
+        <path d="M90 4C93 9 93 19 90 24C87 19 87 9 90 4Z" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M80 14C84 10 88 11 90 14C88 17 84 18 80 14Z" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M100 14C96 10 92 11 90 14C92 17 96 18 100 14Z" stroke="currentColor" stroke-width="1.1"/>
+      </svg>
+
+      <p class="hero-invite-text">
+        Joyfully invite you to share in their happiness as they unite in marriage and celebrate the beginning of their forever.
+      </p>
+
+      <!-- Live Countdown -->
+      <div class="countdown-grid" id="countdown">
+        <div class="countdown-box">
+          <div class="countdown-num" id="days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEREMONY & RECEPTION DETAILS -->
+    <section class="card">
+      <h2 class="section-title">When &amp; Where</h2>
+      <p class="section-subtitle">Dress Code: Garden Formal (Sage, Champagne, or Earth Tones)</p>
+
+      <div class="details-grid">
+        <div class="detail-item">
+          <h3>The Ceremony</h3>
+          <p><strong>4:00 PM</strong></p>
+          <p>Chapel on the Hill</p>
+          <p>Batulao, Tagaytay City</p>
+          <a href="https://maps.google.com/?q=Chapel+on+the+Hill+Batulao" target="_blank" rel="noopener" class="btn">View Map</a>
+        </div>
+
+        <div class="detail-item">
+          <h3>The Reception</h3>
+          <p><strong>6:00 PM</strong></p>
+          <p>The Glass Garden Conservatory</p>
+          <p>Alfonso, Cavite</p>
+          <a href="https://maps.google.com/?q=Alfonso+Cavite" target="_blank" rel="noopener" class="btn">View Map</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER OF EVENTS -->
+    <section class="card">
+      <h2 class="section-title">Order of Events</h2>
+      <p class="section-subtitle">A glimpse into our evening together</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">3:30 PM</div>
+          <div class="timeline-event">Guest Arrival</div>
+          <div class="timeline-desc">Welcome refreshments and acoustic strings.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">4:00 PM</div>
+          <div class="timeline-event">Wedding Ceremony</div>
+          <div class="timeline-desc">Exchange of vows and rings.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">5:15 PM</div>
+          <div class="timeline-event">Cocktail Hour &amp; Portraits</div>
+          <div class="timeline-desc">Canapés on the garden terrace.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">6:30 PM</div>
+          <div class="timeline-event">Dinner &amp; Toasts</div>
+          <div class="timeline-desc">Three-course seated dinner and speeches.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">8:30 PM</div>
+          <div class="timeline-event">First Dance &amp; Celebration</div>
+          <div class="timeline-desc">Music, cake cutting, and dancing under the stars.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE RSVP -->
+    <section class="card" id="rsvp-section">
+      <h2 class="section-title">RSVP</h2>
+      <p class="section-subtitle">Kindly respond on or before May 1, 2027</p>
+
+      <form class="rsvp-form" id="rsvp-form">
+        <div class="form-group">
+          <label for="guest-name">Full Name(s)</label>
+          <input type="text" id="guest-name" name="name" class="form-control" placeholder="e.g., Sofia Reyes &amp; Partner" required />
+        </div>
+
+        <div class="form-group">
+          <label for="guest-email">Email Address</label>
+          <input type="email" id="guest-email" name="email" class="form-control" placeholder="sofia@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label>Will you be attending?</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="attendance" value="yes" checked />
+              <span>Joyfully Accepts</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="attendance" value="no" />
+              <span>Regretfully Declines</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="attending-details">
+          <div class="form-group">
+            <label for="guest-count">Number of Seats</label>
+            <select id="guest-count" name="seats" class="form-control">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dietary">Dietary Restrictions or Song Request</label>
+            <textarea id="dietary" name="notes" rows="2" class="form-control" placeholder="Allergies, vegetarian, or a song that gets you dancing!"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary">Send Response</button>
+        <p id="rsvp-error" class="rsvp-error" role="alert"></p>
+      </form>
+
+      <div id="rsvp-confirmation">
+        <h3 class="script confirmation-heading">Thank You!</h3>
+        <p id="confirmation-message" class="confirmation-text"></p>
+        <button type="button" class="btn" id="edit-rsvp-btn">Submit Another Response</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with love for Elena &amp; Marco &bull; #ElenaAndMarco2027</p>
+    </footer>
+  </main>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
